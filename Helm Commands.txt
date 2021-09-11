@@ -1,0 +1,17 @@
+youtube.com/watch?v=HTj3MMZE6zg
+
+kubectl -n kube-system create serviceaccount tiller
+kubectl get sa
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+kubectl get role,clusterrole,clusterrolebinding,rolebinding -n kube-system
+
+helm version --short
+helm init --service-acount tiller
+helm home
+helm repo list
+helm list
+helm search jenkins
+helm inspect stable/jenkins -> inspect the jenkins help chart without downloading it
+helm fetch stable/jenkins  -> to download the tar file of Jenkins helm chart
+helm reset --remove-helm-home --force -> to delete all the stuff related to helm and tiller, but in-reality it just deletes deployement, rest all we need to delete manaully...need to check on latest k8s
+
