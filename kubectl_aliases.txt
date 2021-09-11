@@ -1,0 +1,24 @@
+# vi /root/.bashrc
+alias k='kubectl'
+alias kd='kubectl describe'
+alias kdp='kubectl describe pods'
+alias kdd='kubectl describe deployments'
+alias kg='kubectl get'
+alias kgn='kubectl get nodes'
+alias kgp='kubectl get pods'
+alias kgd='kubectl get deployments'
+alias kga='kubectl get all'
+alias kgs='kubectl get svc'
+alias kgr='kubectl get rs'
+
+export ETCDCTL_API=3
+
+#source /root/.bashrc
+#alias
+
+#kgn
+#kgp
+#kgd
+#kgr
+#kga -n test
+
